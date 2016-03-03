@@ -1,12 +1,13 @@
 {
   "name": "npm-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npm babel boilerplate",
-  "main": "dist/index.js",
+  "main": "dist/libname.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir dist",
-    "prepublish": "npm run build"
+    "test": "clear && npm run build && mocha",
+    "build": "webpack",
+    "prepublish": "npm run build",
+    "dev": "webpack --progress --colors --watch"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,18 @@
   "homepage": "https://github.com/f021/npm-boilerplate.git#readme",
   "devDependencies": {
     "babel-cli": "6.5.1",
-    "babel-preset-es2015": "6.5.0"
+    "babel-eslint": "5.0.0",
+    "babel-loader": "6.2.4",
+    "babel-preset-es2015": "6.5.0",
+    "babel-preset-stage-0": "6.5.0",
+    "babel-preset-stage-1": "6.5.0",
+    "babel-preset-stage-2": "6.5.0",
+    "chai": "3.5.0",
+    "eslint": "2.2.0",
+    "eslint-loader": "1.3.0",
+    "jsdoc": "3.4.0",
+    "webpack": "1.12.14",
+    "mocha": "2.4.5",
   },
   "dependencies": {},
   "keywords": [
