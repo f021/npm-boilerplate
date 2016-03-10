@@ -4,10 +4,11 @@
   "description": "npm babel boilerplate",
   "main": "dist/libname.js",
   "scripts": {
-    "test": "clear && npm run build && mocha",
-    "build": "webpack",
+    "test": "clear && mocha",
+    "build": "npm run makesrc && webpack",
     "prepublish": "npm run build",
-    "dev": "webpack --progress --colors --watch"
+    "dev": "webpack --progress --colors --watch",
+    "makesrc": "node scripts/makeIndex.js src index.js"
   },
   "repository": {
     "type": "git",
